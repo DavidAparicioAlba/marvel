@@ -5,4 +5,5 @@ import com.myapplication.domain.models.image.ImageEntity
 data class CharacterEntity(var id: Int,
                            var name: String? = null,
                            var description: String? = null,
-                           var thumbnail: ImageEntity? = null, )
+                           var thumbnail: ImageEntity? = null,
+                           var urls: List<String> = listOf())

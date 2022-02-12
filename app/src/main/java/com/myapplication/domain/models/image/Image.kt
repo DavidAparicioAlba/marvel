@@ -1,4 +1,9 @@
 package com.myapplication.domain.models.image
 
-class Image {
+import com.google.gson.annotations.SerializedName
+
+data class Image(@SerializedName("path") val path: String, @SerializedName("extension") val extension: String) {
+    fun toEntity(): ImageEntity {
+        return ImageEntity(path, extension)
+    }
 }
